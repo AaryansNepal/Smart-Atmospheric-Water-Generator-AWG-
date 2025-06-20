@@ -1,0 +1,73 @@
+Code Structure Overview
+This repository implements a modular Python-based control system for a Smart Atmospheric Water Generator (AWG). The code is organized into functional subdirectories for clarity and scalability. Below is a breakdown of each folder and its responsibility:
+
+
+AWG/
+├── main.py
+├── sensors/
+│   ├── bme280_reader.py
+│   └── distance_sensor.py
+├── actuators/
+│   ├── relay_control.py
+│   ├── leds.py
+│   └── lcd_display.py
+├── network/
+│   ├── mqtt_handler.py
+│   └── connectivity.py
+├── utils/
+│   ├── constants.py
+│   ├── logger.py
+│   └── tank_config.py
+└── data/
+    └── data_log.json
+ main.py
+The entry point of the application. It contains the main control loop that:
+
+Reads humidity and water level
+
+Controls the AWG motor based on conditions
+
+Handles safety shutdowns
+
+Displays live data on LCD
+
+Detects button presses for calibration and syncing
+
+Performs offline logging and MQTT publishing
+
+ sensors/
+Responsible for environmental data acquisition.
+
+bme280_reader.py: Interfaces with the BME280 sensor to read temperature and humidity.
+
+distance_sensor.py: Uses the HC-SR04 ultrasonic sensor to measure water level and handles tank calibration logic.
+
+ actuators/
+Controls output components based on system logic.
+
+relay_control.py: Turns the AWG motor (or fan) ON/OFF using a GPIO relay.
+
+leds.py: Manages RGB LED indicators and buzzer alarms to reflect system status.
+
+lcd_display.py: Displays real-time humidity, temperature, water level, and error states on a 1602 I2C LCD.
+
+ network/
+Handles internet connectivity and MQTT messaging.
+
+connectivity.py: Checks if the system is online.
+
+mqtt_handler.py: Publishes sensor readings to a specified MQTT broker when the network is available.
+
+ utils/
+Shared constants and support logic.
+
+constants.py: Stores system-wide constants like GPIO pins, thresholds, and default tank height.
+
+logger.py: Saves data locally to a JSON file (data_log.json) for offline mode.
+
+tank_config.py: Saves and loads the calibrated tank height to/from a file for persistent configuration.
+
+ data/
+data_log.json: Stores sensor logs temporarily when internet is unavailable. Synced to MQTT later using the sync button.
+
+This structure ensures the system is clean, maintainable, and hardware-adaptive. Each module is focused on a single responsibility, which supports modular testing and easier debugging.

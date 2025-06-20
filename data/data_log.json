@@ -1,0 +1,72 @@
+[
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 71.76,
+    "water_level": 0.128
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 72.48,
+    "water_level": 0.125
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 69.57,
+    "water_level": 0.135
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 69.57,
+    "water_level": 0.135
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 71.3,
+    "water_level": 0.117
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 71.83,
+    "water_level": 0.145
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 70.44,
+    "water_level": 0.142
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 71.6,
+    "water_level": 0.114
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 71.83,
+    "water_level": 0.142
+  },
+   {
+    "session": 1,
+    "reading": 1,
+    "humidity": 64.28,
+    "water_level": 0.11
+  },
+  {
+    "session": 1,
+    "reading": 1,
+    "humidity": 67.08,
+    "water_level": 0.124
+  }
+]
+
+
+
+
